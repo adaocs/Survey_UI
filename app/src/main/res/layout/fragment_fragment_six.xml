@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="layout.fragment_siz">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="20dp"
+        android:text="How old are you?"
+        android:id= "@+id/description"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FFFFFF"
+        android:id= "@+id/input"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Next"
+        android:background="#FFFFFF"
+        android:textColor="#255"
+        android:padding="4dp"
+        android:layout_marginBottom="30dp"
+        android:id= "@+id/choice1"/>
+
+</LinearLayout>
