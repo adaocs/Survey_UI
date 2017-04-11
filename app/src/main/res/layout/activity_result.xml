@@ -33,4 +33,15 @@
 
         android:layout_marginTop="50dp" />
 
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Start next survey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        />
+
 </android.support.constraint.ConstraintLayout>

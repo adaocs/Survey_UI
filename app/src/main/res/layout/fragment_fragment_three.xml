@@ -6,11 +6,10 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="layout.fragment_three">
-
+>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="20dp"
         android:textSize="20dp"
         android:text="During the past 4 weeks ..."
@@ -19,11 +18,11 @@
     />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="25dp"
         android:textSize="20dp"
         android:text="Activites"
-        android:id= "@+id/question"/>
+        android:id= "@+id/activity"/>
 
     />
     <Button
@@ -33,7 +32,7 @@
         android:background="#FFFFFF"
         android:textColor="#255"
         android:padding="4dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="50dp"
         android:id= "@+id/choice1"/>
     <Button
         android:layout_width="match_parent"

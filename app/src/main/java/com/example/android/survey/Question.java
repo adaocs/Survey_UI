@@ -1,5 +1,9 @@
 package com.example.android.survey;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -7,7 +11,7 @@ import java.util.ArrayList;
  */
 
 // Class which represents a question.
-public class Question {
+public class Question  {
 
     public void setDescription(String description) {
         this.description = description;
@@ -32,4 +36,5 @@ public class Question {
     public Question() {
         options = new ArrayList<>();
     }
+
 }

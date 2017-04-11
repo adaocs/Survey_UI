@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     private Button choice1, choice2, choice3, choice4;
     private ArrayList<Question> questions;
-    private TextView questionView;
+    private TextView questionView, questionStatus;
     private int score;
     private int index;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,9 +104,11 @@ public class MainActivity extends AppCompatActivity {
         choice3 = (Button) findViewById(R.id.choice3);
         choice4 = (Button) findViewById(R.id.choice4);
         questionView = (TextView) findViewById(R.id.question);
+        questionStatus = (TextView) findViewById(R.id.questionStatus);
         score = 0;
         index = 0;
         updateQuestions(index);
+
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
         choice2.setText(question.getOptions().get(1).getText());
         choice3.setText(question.getOptions().get(2).getText());
         choice4.setText(question.getOptions().get(3).getText());
+        questionStatus.setText("Question "+ (index+1) + " out of 21");
 
     }
 

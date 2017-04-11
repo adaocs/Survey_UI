@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<body>
+    <question>
+        <description>In general, would you say your health is :</description>
+        <option value="0">Excellent</option>
+        <option value="1">Very good</option>
+        <option value="2">Good</option>
+        <option value="3">Fair</option>
+        <option value ="4">Poor</option>
+    </question>
+
+    <question>
+        <description>Compared to one year ago, how would you rate your health in general now?</description>
+        <option value="0">Much better now than 1 year ago</option>
+        <option value="1">Somewhat better now than 1 year ago</option>
+        <option value="2">About the same as 1 year ago</option>
+        <option value="3">Somewhat worse now than 1 year ago</option>
+        <option value="4">Much worse now than 1 year ago</option>
+    </question>
+
+    <question>
+        <description>Vigorous activities, such as running, lifting heavy objects, participating in strenuous sports</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Moderate activities, such as moving a table, pushing a vaccuum cleaner, bowling, or playing golf</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Lifting or carrying groceries</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Climbing several flights of stairs</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Climbing one flight of stair</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Bending, kneeling, or stooping</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+
+    <question>
+        <description>Walking more than a mile</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Walking several blocks</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+
+    <question>
+        <description>Walking one block</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+
+    <question>
+        <description>Bathing or dressing yourself</description>
+        <option value="0">Yes, limited a lot</option>
+        <option value="1">Yes, limited a little</option>
+        <option value="2">No, not limited at all</option>
+    </question>
+
+    <question>
+        <description>Cut down the amount of time you spent on work or other activities</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Accomplished less than you would like</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Were limited in the kind of work or other activities</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Had difficulty performing the work or other activities (for example, it took extra effort)</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Cut down the amount of time you spent on work or other activities</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Accomplished less than you would like</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Didn't do work other activities as carefully as usual</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>During the past 4 weeks, to what extent has your physical health or emotional problems interfered with your normal social activities with family, friends, neighbors, or groups ?</description>
+        <option value="0">Not at all</option>
+        <option value="1">Slightly</option>
+        <option value="2">Moderately</option>
+        <option value="3">Quite a bit</option>
+        <option value ="4">Extremely</option>
+    </question>
+
+    <question>
+        <description>How much bodily pain have you had during the past 4 weeks?</description>
+        <option value="0">None</option>
+        <option value="1">Very mild</option>
+        <option value="2">Mild</option>
+        <option value="3">Moderate</option>
+        <option value="4">Severe</option>
+    </question>
+
+    <question>
+        <description>During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework) ?</description>
+        <option value="0">Not at all</option>
+        <option value="1">A little bit</option>
+        <option value="2">Moderately</option>
+        <option value="3">Quite a bit</option>
+        <option value="4">Extremely</option>
+    </question>
+
+    <question>
+        <description>During the past 4 weeks, how much of the time has your physical health or emotional problems interfered with your social activities (like visiting friends, relatives, etc.) ?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">Some of the time</option>
+        <option value="3">A little of the time</option>
+        <option value="4">None of the time</option>
+    </question>
+
+    <question>
+        <description>Did you feel full of pep?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Have you been a very nervous person?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Have you felt so down in the dumps that nothing could cheer you up?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Have you felt calm and peaceful?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Did you have a lot of energy?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+
+    <question>
+        <description>Have you felt downhearted and blue?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Did you feel worn out?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Have you been a happy person?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>Did you feel tired?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">A good bit of the time</option>
+        <option value="3">Some of the time</option>
+        <option value="4">A little of the time</option>
+        <option value="5">None of the time</option>
+    </question>
+
+    <question>
+        <description>I seem to get sick a little easier than other people?</description>
+        <option value="0">Definitely true</option>
+        <option value="1">Mostly true</option>
+        <option value="2">Don't know</option>
+        <option value="3">Mostly false</option>
+        <option value="4">Definitely false</option>
+    </question>
+
+    <question>
+        <description>I am as healthy as anybody I know</description>
+        <option value="0">Definitely true</option>
+        <option value="1">Mostly true</option>
+        <option value="2">Don't know</option>
+        <option value="3">Mostly false</option>
+        <option value="4">Definitely false</option>
+    </question>
+
+    <question>
+        <description>I expect my health to get worse</description>
+        <option value="0">Definitely true</option>
+        <option value="1">Mostly true</option>
+        <option value="2">Don't know</option>
+        <option value="3">Mostly false</option>
+        <option value="4">Definitely false</option>
+    </question>
+
+    <question>
+        <description>My health is excellent</description>
+        <option value="0">Definitely true</option>
+        <option value="1">Mostly true</option>
+        <option value="2">Don't know</option>
+        <option value="3">Mostly false</option>
+        <option value="4">Definitely false</option>
+    </question>
+
+
+</body>

@@ -6,7 +6,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="layout.fragment_five">
+   >
 
     <TextView
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:textColor="#255"
         android:padding="4dp"
         android:layout_marginBottom="30dp"
-        android:id= "@+id/choice1"/>
+        android:id= "@+id/male"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +33,6 @@
         android:textColor="#255"
         android:padding="4dp"
         android:layout_marginBottom="30dp"
-        android:id= "@+id/choice2"/>
+        android:id= "@+id/female"/>
 
 </LinearLayout>

@@ -3,11 +3,14 @@ package com.example.android.survey;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView text_Score, text_Result;
+    Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +21,10 @@ public class ResultActivity extends AppCompatActivity {
 
         text_Score = (TextView) findViewById(R.id.score);
         text_Result = (TextView) findViewById(R.id.result);
+        next = (Button) findViewById(R.id.next);
+        next.setOnClickListener(this);
 
-        text_Score.setText("Levels of Depression: " + score );
+        text_Score.setText("Levels of Depression: " + score + " / 63" );
 
 
         if(score >= 0 && score <= 10){
@@ -49,8 +54,11 @@ public class ResultActivity extends AppCompatActivity {
         if(score > 40){
             text_Result.setText("Result: Extreme depression");
         }
+    }
 
 
-
+    public void onClick(View v) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }

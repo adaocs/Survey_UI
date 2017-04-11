@@ -1,16 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    tools:context="layout.fragment_one">
+    android:paddingTop="16dp">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="10dp"
         android:textSize="20dp"
         android:text="Questions?"
         android:id= "@+id/question"/>
@@ -23,7 +21,7 @@
         android:background="#FFFFFF"
         android:textColor="#255"
         android:padding="4dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:id= "@+id/choice1"/>
     <Button
         android:layout_width="match_parent"
@@ -32,7 +30,7 @@
         android:background="#FFFFFF"
         android:textColor="#255"
         android:padding="4dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:id= "@+id/choice2"/>
 
     <Button
@@ -42,7 +40,7 @@
         android:background="#FFFFFF"
         android:textColor="#255"
         android:padding="4dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:id= "@+id/choice3"/>
 
     <Button
@@ -52,7 +50,7 @@
         android:background="#FFFFFF"
         android:textColor="#255"
         android:padding="4dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:id= "@+id/choice4"/>
 
     <Button

@@ -6,7 +6,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="layout.fragment_two">
+   >
 
     <TextView
         android:layout_width="match_parent"
@@ -19,11 +19,11 @@
     />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="20dp"
         android:textSize="20dp"
         android:text="Activites"
-        android:id= "@+id/question"/>
+        android:id= "@+id/activity"/>
 
     />
     <Button

@@ -1,10 +1,12 @@
 package com.example.android.survey;
 
+import java.io.Serializable;
+
 /**
  * Created by MrReRe on 4/2/17.
  */
 
-public class Option {
+public class Option  {
     public int getValue() {
         return value;
     }
