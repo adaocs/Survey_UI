@@ -24,6 +24,9 @@
         <activity
             android:name=".ThirdActivity"
             android:parentActivityName=".SecondActivity" />
+        <activity
+            android:name=".Result_ThirdActivity"
+            android:label="@string/title_activity_result__third"></activity>
     </application>
 
 </manifest>

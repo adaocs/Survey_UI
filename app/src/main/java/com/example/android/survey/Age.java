@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * Created by MrReRe on 4/11/17.
  */
 
-public class FragmentEight_Age extends Fragment implements View.OnClickListener {
+public class Age extends Fragment implements View.OnClickListener {
     private int score;
     private EditText input;
     private Button done;
@@ -34,8 +34,6 @@ public class FragmentEight_Age extends Fragment implements View.OnClickListener 
         answerList = (ArrayList<Answer>) bundle.getSerializable("answers");
         question = new Question();
         question.setDescription("How old are you?");
-
-
 
         input = (EditText) view.findViewById(R.id.input);
         done = (Button) view.findViewById(R.id.done);

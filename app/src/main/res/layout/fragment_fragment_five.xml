@@ -35,4 +35,13 @@
         android:layout_marginBottom="30dp"
         android:id= "@+id/female"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:text=""
+        android:id= "@+id/questionStatus"/>
+
 </LinearLayout>

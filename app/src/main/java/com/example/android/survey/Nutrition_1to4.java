@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,29 +23,30 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Created by MrReRe on 4/10/17.
+ * Created by MrReRe on 4/16/17.
  */
 
-public class FragmentOne_HealthStatus_1and2 extends Fragment implements View.OnClickListener {
+public class Nutrition_1to4 extends Fragment implements OnClickListener {
+
+    private Button yes, no;
+    private ArrayList<Answer> answers;
 
     private ArrayList<Question> questions;
     final String QUESTION = "question";
     final String OPTION = "option";
     final String DESCRIPTION = "description";
 
-    TextView questionView, questionStatus;
-    Button choice1, choice2, choice3, choice4, choice5;
-    int index,score;
-    ArrayList<Answer> answers;
+    private int index;
+    private TextView questionView, questionStatus;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup containter, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_fragment_one,containter, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup containter, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_fragment_five, containter, false);
 
         AssetManager assetManager = getActivity().getAssets();
         InputStream inputStream = null;
         try {
-            inputStream = assetManager.open("questions2.xml");
+            inputStream = assetManager.open("questions3_nutrition.xml");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,8 +93,6 @@ public class FragmentOne_HealthStatus_1and2 extends Fragment implements View.OnC
                 eventType = xmlPullParser.next();
             }
 
-
-
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -101,151 +101,73 @@ public class FragmentOne_HealthStatus_1and2 extends Fragment implements View.OnC
 
         questionView = (TextView) view.findViewById(R.id.question);
         questionStatus = (TextView) view.findViewById(R.id.questionStatus);
-        choice1 = (Button) view.findViewById(R.id.choice1);
-        choice2 = (Button) view.findViewById(R.id.choice2);
-        choice3 = (Button) view.findViewById(R.id.choice3);
-        choice4 = (Button) view.findViewById(R.id.choice4);
-        choice5 = (Button) view.findViewById(R.id.choice5);
+        yes = (Button) view.findViewById(R.id.male);
+        no = (Button) view.findViewById(R.id.female);
 
         index = 0;
-        score = 0;
         updateQuestions(index);
 
-        choice1.setOnClickListener(this);
-        choice2.setOnClickListener(this);
-        choice3.setOnClickListener(this);
-        choice4.setOnClickListener(this);
-        choice5.setOnClickListener(this);
-
+        yes.setOnClickListener(this);
+        no.setOnClickListener(this);
 
         answers = new ArrayList<>();
         return view;
     }
+    @Override
+    public void onClick(View v) {
 
-    public void updateQuestions(int num) {
-        Question question = questions.get(num);
-        questionView.setText(question.getDescription());
-        choice1.setText(question.getOptions().get(0).getText());
-        choice2.setText(question.getOptions().get(1).getText());
-        choice3.setText(question.getOptions().get(2).getText());
-        choice4.setText(question.getOptions().get(3).getText());
-        choice5.setText(question.getOptions().get(4).getText());
-        questionStatus.setText("Question "+ (index+1) + " out of 36");
-
-
-    }
-
-    public void onClick(View v){
 
         Bundle bundle = new Bundle();
         bundle.putSerializable("questions", (Serializable) questions);
         FragmentManager fragmentManager = getActivity().getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        FragmentTwo_HealthStatus_3to12 fragmentTwo = new FragmentTwo_HealthStatus_3to12();
+        Nutrition_5 fragmentTwo = new Nutrition_5();
         fragmentTwo.setArguments(bundle);
         Question question = questions.get(index);
         Option option;
         Answer answer;
-        switch (v.getId()){
-            case R.id.choice1:
-                score += 1;
+
+        switch (v.getId()) {
+            case R.id.male:
                 option = question.getOptions().get(0);
                 answer = new Answer(question, option);
                 answers.add(answer);
                 index++;
-                if(index == 2){
-                    bundle.putInt("score", score);
+                if (index == 4) {
                     bundle.putInt("index", index);
                     bundle.putSerializable("answers", (Serializable) answers);
                     fragmentTransaction.replace(R.id.fragment_container, fragmentTwo);
                     fragmentTransaction.commit();
 
-                }
-                else if(index < questions.size()) {
+                } else if (index < questions.size()) {
                     updateQuestions(index);
                 }
                 break;
 
-            case R.id.choice2:
-                score += 2;
+            case R.id.female:
                 option = question.getOptions().get(1);
                 answer = new Answer(question, option);
                 answers.add(answer);
                 index++;
-                if(index == 2){
-                    bundle.putInt("score", score);
+                if (index == 4) {
                     bundle.putInt("index", index);
                     bundle.putSerializable("answers", (Serializable) answers);
                     fragmentTransaction.replace(R.id.fragment_container, fragmentTwo);
                     fragmentTransaction.commit();
-                }
-                else if(index < questions.size()) {
+                } else if (index < questions.size()) {
                     updateQuestions(index);
                 }
 
                 break;
-
-            case R.id.choice3:
-                score += 3;
-                option = question.getOptions().get(0);
-                answer = new Answer(question, option);
-                answers.add(answer);
-                index++;
-                if(index == 2){
-                    bundle.putInt("score", score);
-                    bundle.putInt("index", index);
-                    bundle.putSerializable("answers", (Serializable) answers);
-                    fragmentTransaction.replace(R.id.fragment_container, fragmentTwo);
-                    fragmentTransaction.commit();
-                }
-                else if(index < questions.size()) {
-                    updateQuestions(index);
-                }
-                break;
-
-
-            case R.id.choice4:
-                score += 4;
-                option = question.getOptions().get(0);
-                answer = new Answer(question, option);
-                answers.add(answer);
-                index++;
-                if(index == 2){
-                    bundle.putInt("score", score);
-                    bundle.putInt("index", index);
-                    bundle.putSerializable("answers",  (Serializable) answers);
-                    fragmentTransaction.replace(R.id.fragment_container, fragmentTwo);
-                    fragmentTransaction.commit();
-                }
-                else if(index < questions.size()) {
-                    updateQuestions(index);
-                }
-
-                break;
-
-            case R.id.choice5:
-                score += 5;
-                option = question.getOptions().get(0);
-                answer = new Answer(question, option);
-                answers.add(answer);
-                index++;
-                if(index == 2){
-                    bundle.putInt("score", score);
-                    bundle.putInt("index", index);
-                    bundle.putSerializable("answers", (Serializable) answers);
-                    fragmentTransaction.replace(R.id.fragment_container, fragmentTwo);
-                    fragmentTransaction.commit();
-                }
-                else if(index < questions.size()) {
-                    updateQuestions(index);
-                }
-
-                break;
-
-
         }
+    }
+    public void updateQuestions(int num) {
+        Question question = questions.get(num);
+        questionView.setText(question.getDescription());
+        yes.setText(question.getOptions().get(0).getText());
+        no.setText(question.getOptions().get(1).getText());
+        questionStatus.setText("Question "+ (index+1) + " out of 13");
+
 
     }
-
-
 }

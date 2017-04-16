@@ -41,7 +41,7 @@ public class FragmentSeven_Gender extends Fragment implements View.OnClickListen
         Bundle bundle = new Bundle();
         FragmentManager fragmentManager = getActivity().getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        FragmentEight_Age fragmentEight = new FragmentEight_Age();
+        Age fragmentEight = new Age();
         fragmentEight.setArguments(bundle);
         Question question = new Question();
         question.setDescription("Are you male or female?");

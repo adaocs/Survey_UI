@@ -25,7 +25,7 @@
 
     />
     <Button
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text = "All of the time "
         android:background="#FFFFFF"
@@ -34,7 +34,7 @@
         android:layout_marginTop="230dp"
         android:id= "@+id/choice1"/>
     <Button
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text = "Most of the time"
         android:background="#FFFFFF"
@@ -44,7 +44,7 @@
         android:id= "@+id/choice2"/>
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text = "A good bit of the time"
         android:background="#FFFFFF"

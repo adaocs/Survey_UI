@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<body>
+    <question>
+        <description>Do you have any food allergies?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Do you follow a special diet at home or avoid certain foods?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Do you take vitamins/minerals?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Do you take nutritional supplements?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Please provide a 24 hour diet recall (what you ate in the past 24 hours)</description>
+    </question>
+
+    <question>
+        <description>How often do you east fast food/ out at restaurants during the week?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">Some of the time</option>
+        <option value="3">A little of the time</option>
+        <option value="4">None of the time</option>
+    </question>
+
+    <question>
+        <description>How often do you drink alcohol during the week?</description>
+        <option value="0">All of the time</option>
+        <option value="1">Most of the time</option>
+        <option value="2">Some of the time</option>
+        <option value="3">A little of the time</option>
+        <option value="4">None of the time</option>
+    </question>
+
+    <question>
+        <description>What is your usual body weight? (in lbs)</description>
+    </question>
+
+
+    <question>
+        <description>Have you lost or gained weight?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>If so how much and in what time?</description>
+    </question>
+
+    <question>
+        <description>Do you have problems with nausea/vomiting? </description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Do you have problems with diarrhea/constipation?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+
+    <question>
+        <description>Do you have problems chewing or swallowing?</description>
+        <option value="0">Yes</option>
+        <option value="1">No</option>
+    </question>
+</body>

@@ -2,30 +2,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
->
+    >
+
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:textSize="20dp"
-        android:text="How old are you?"
-        android:id= "@+id/description"/>
+        android:text="How much have you lost ? (in lbs)"
+        android:id= "@+id/question"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="30dp"
         android:background="#FFFFFF"
         android:textColor="#000000"
-        android:id= "@+id/input"/>
+        android:id= "@+id/weightInput"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:text="In what time ? (in days)"
+        android:id= "@+id/day"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:id= "@+id/dayInput"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "Go to final survey"
+        android:text = "next question"
         android:background="#FFFFFF"
         android:textColor="#255"
         android:padding="4dp"
@@ -36,8 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="20dp"
+
         android:textAlignment="center"
-        android:text=""
+        android:text="Question 2 out of 13"
         android:id= "@+id/questionStatus"/>
 
 </LinearLayout>
