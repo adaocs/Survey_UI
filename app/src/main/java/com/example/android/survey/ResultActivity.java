@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView text_Score, text_Result;
     Button next;
+    ArrayList<Option> answers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +21,12 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
         Intent intent = getIntent();
         int score = intent.getIntExtra("score",0);
+        answers = (ArrayList<Option>) intent.getSerializableExtra("answers");
 
+        // print out the answers that the user chose
+        for(int i = 0; i < answers.size(); i++){
+            System.out.println(answers.get(i).getText());
+        }
         text_Score = (TextView) findViewById(R.id.score);
         text_Result = (TextView) findViewById(R.id.result);
         next = (Button) findViewById(R.id.next);

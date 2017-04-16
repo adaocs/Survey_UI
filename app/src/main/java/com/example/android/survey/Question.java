@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 
 // Class which represents a question.
-public class Question  {
+public class Question implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;

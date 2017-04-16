@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by MrReRe on 4/11/17.
@@ -18,16 +19,18 @@ import java.io.Serializable;
 public class FragmentSeven_Gender extends Fragment implements View.OnClickListener{
 
     private Button male, female;
-    private boolean isMale, isFemale;
+    private ArrayList<Answer> answers;
+
     private int score;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fragment_five, container, false);
+
         Bundle bundle = getArguments();
         score = bundle.getInt("score");
+        answers = (ArrayList<Answer>) bundle.getSerializable("answers");
         male = (Button) view.findViewById(R.id.male);
         female = (Button) view.findViewById(R.id.female);
-        isMale = false;
-        isFemale = false;
+
         male.setOnClickListener(this);
         female.setOnClickListener(this);
         return view;
@@ -40,16 +43,20 @@ public class FragmentSeven_Gender extends Fragment implements View.OnClickListen
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         FragmentEight_Age fragmentEight = new FragmentEight_Age();
         fragmentEight.setArguments(bundle);
-
+        Question question = new Question();
+        question.setDescription("Are you male or female?");
+        Option option;
+        Answer answer;
         switch (v.getId()) {
 
             case R.id.male:
 
-                isMale = true;
-                isFemale = false;
+
+                option = new Option(0, "male");
+                answer = new Answer(question, option);
+                answers.add(answer);
                 bundle.putInt("score", score);
-                bundle.putBoolean("male", isMale);
-                bundle.putBoolean("female", isFemale);
+                bundle.putSerializable("answers", (Serializable) answers);
                 fragmentTransaction.replace(R.id.fragment_container, fragmentEight);
                 fragmentTransaction.commit();
 
@@ -58,11 +65,12 @@ public class FragmentSeven_Gender extends Fragment implements View.OnClickListen
 
             case R.id.female:
 
-                isMale = false;
-                isFemale = true;
+
+                option = new Option(1, "female");
+                answer = new Answer(question, option);
+                answers.add(answer);
                 bundle.putInt("score", score);
-                bundle.putBoolean("male", isMale);
-                bundle.putBoolean("female", isFemale);
+                bundle.putSerializable("answers", (Serializable) answers);
                 fragmentTransaction.replace(R.id.fragment_container, fragmentEight);
                 fragmentTransaction.commit();
 

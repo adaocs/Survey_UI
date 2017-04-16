@@ -15,6 +15,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView questionView, questionStatus;
     private int score;
     private int index;
-
+    private ArrayList<Option> answers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,12 +108,15 @@ public class MainActivity extends AppCompatActivity {
         questionStatus = (TextView) findViewById(R.id.questionStatus);
         score = 0;
         index = 0;
+        answers = new ArrayList<>();
         updateQuestions(index);
 
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 score += 0;
+                Question question = questions.get(index);
+                answers.add(question.getOptions().get(0));
                 index++;
                 if (index < questions.size())
                     updateQuestions(index);
@@ -124,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score += 1;
+                Question question = questions.get(index);
+                answers.add(question.getOptions().get(1));
                 index++;
                 if (index < questions.size())
                     updateQuestions(index);
@@ -135,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score += 2;
+                Question question = questions.get(index);
+                answers.add(question.getOptions().get(2));
                 index++;
                 if (index < questions.size())
                     updateQuestions(index);
@@ -146,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score += 3;
+                Question question = questions.get(index);
+                answers.add(question.getOptions().get(3));
                 index++;
                 if (index < questions.size())
                     updateQuestions(index);
@@ -170,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
     public void showResults() {
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("score", score);
+        intent.putExtra("answers", (Serializable) answers);
         startActivity(intent);
     }
 }

@@ -19,9 +19,10 @@ import java.util.ArrayList;
 
 public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.OnClickListener {
     private ArrayList<Question> questions;
-    private TextView questionView;
+    private TextView questionView, questionStatus;
     private Button choice1, choice2, choice3, choice4, choice5;
     private int index, score;
+    private ArrayList<Answer> answers;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveedInstanceState) {
@@ -30,9 +31,14 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
         Bundle bundle = getArguments();
 
         questions = (ArrayList<Question>) bundle.getSerializable("questions");
+
+        answers = (ArrayList<Answer>) bundle.getSerializable("answers");
+
         index = bundle.getInt("index");
         score = bundle.getInt("score");
         questionView = (TextView) view.findViewById(R.id.question);
+        questionStatus = (TextView) view.findViewById(R.id.questionStatus);
+
         choice1 = (Button) view.findViewById(R.id.choice1);
         choice2 = (Button) view.findViewById(R.id.choice2);
         choice3 = (Button) view.findViewById(R.id.choice3);
@@ -58,15 +64,23 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
         FragmentSeven_Gender fragmentSeven = new FragmentSeven_Gender();
         fragmentSeven.setArguments(bundle);
 
+        Question question = questions.get(index);
+        Option option;
+        Answer answer;
+
         switch (v.getId()) {
 
             case R.id.choice1:
                 score += 1;
-                System.out.println(index);
+                option = question.getOptions().get(0);
+                answer = new Answer(question, option);
+                answers.add(answer);
                 index++;
                 if (index == 36) {
                     bundle.putInt("score", score);
                     bundle.putInt("index", index);
+                    bundle.putSerializable("answers", (Serializable) answers);
+
                     fragmentTransaction.replace(R.id.fragment_container, fragmentSeven);
                     fragmentTransaction.commit();
 
@@ -77,10 +91,16 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice2:
                 score += 2;
+                option = question.getOptions().get(1);
+                answer = new Answer(question, option);
+                answers.add(answer);
+
                 index++;
                 if (index == 36) {
                     bundle.putInt("score", score);
                     bundle.putInt("index", index);
+                    bundle.putSerializable("answers", (Serializable) answers);
+
                     fragmentTransaction.replace(R.id.fragment_container, fragmentSeven);
                     fragmentTransaction.commit();
                 } else if (index < questions.size()) {
@@ -90,10 +110,16 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice3:
                 score += 3;
+
+                option = question.getOptions().get(2);
+                answer = new Answer(question, option);
+                answers.add(answer);
                 index++;
                 if (index == 36) {
                     bundle.putInt("score", score);
                     bundle.putInt("index", index);
+                    bundle.putSerializable("answers", (Serializable) answers);
+
                     fragmentTransaction.replace(R.id.fragment_container, fragmentSeven);
                     fragmentTransaction.commit();
                 } else if (index < questions.size()) {
@@ -103,10 +129,15 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice4:
                 score += 4;
+                option = question.getOptions().get(3);
+                answer = new Answer(question, option);
+                answers.add(answer);
                 index++;
                 if (index == 36) {
                     bundle.putInt("score", score);
                     bundle.putInt("index", index);
+                    bundle.putSerializable("answers", (Serializable) answers);
+
                     fragmentTransaction.replace(R.id.fragment_container, fragmentSeven);
                     fragmentTransaction.commit();
                 } else if (index < questions.size()) {
@@ -116,10 +147,15 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice5:
                 score += 5;
+                option = question.getOptions().get(4);
+                answer = new Answer(question, option);
+                answers.add(answer);
                 index++;
                 if (index == 36) {
                     bundle.putInt("score", score);
                     bundle.putInt("index", index);
+                    bundle.putSerializable("answers", (Serializable) answers);
+
                     fragmentTransaction.replace(R.id.fragment_container, fragmentSeven);
                     fragmentTransaction.commit();
                 } else if (index < questions.size()) {
@@ -140,6 +176,7 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
         choice3.setText(question.getOptions().get(2).getText());
         choice4.setText(question.getOptions().get(3).getText());
         choice5.setText(question.getOptions().get(4).getText());
+        questionStatus.setText("Question "+ (index+1) + " out of 36");
 
 
     }
