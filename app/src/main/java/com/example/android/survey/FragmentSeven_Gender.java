@@ -47,13 +47,14 @@ public class FragmentSeven_Gender extends Fragment implements View.OnClickListen
         question.setDescription("Are you male or female?");
         Option option;
         Answer answer;
+        Long time;
         switch (v.getId()) {
 
             case R.id.male:
 
-
+                time = System.currentTimeMillis();
                 option = new Option(0, "male");
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 bundle.putInt("score", score);
                 bundle.putSerializable("answers", (Serializable) answers);
@@ -65,9 +66,9 @@ public class FragmentSeven_Gender extends Fragment implements View.OnClickListen
 
             case R.id.female:
 
-
+                time = System.currentTimeMillis();
                 option = new Option(1, "female");
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 bundle.putInt("score", score);
                 bundle.putSerializable("answers", (Serializable) answers);

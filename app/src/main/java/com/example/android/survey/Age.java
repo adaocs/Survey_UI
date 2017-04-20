@@ -27,6 +27,7 @@ public class Age extends Fragment implements View.OnClickListener {
     private Question question;
     private Option option;
     private Answer answer;
+    private Long time;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fragment_six, container, false);
         Bundle bundle = getArguments();
@@ -44,8 +45,9 @@ public class Age extends Fragment implements View.OnClickListener {
 
     public void onClick(View v){
         age = input.getText().toString();
+        time = System.currentTimeMillis();
         option = new Option(0, age);
-        answer = new Answer(question, option);
+        answer = new Answer(question, option, time);
         answerList.add(answer);
         for(Answer answer: answerList){
             System.out.println(answer.getQuestion().getDescription());

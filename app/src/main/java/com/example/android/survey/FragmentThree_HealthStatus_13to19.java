@@ -61,12 +61,14 @@ public class FragmentThree_HealthStatus_13to19 extends Fragment implements View.
         Question question = questions.get(index);
         Option option;
         Answer answer;
+        Long time;
         switch (v.getId()) {
 
             case R.id.choice1:
                 score += 1;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 19) {
@@ -83,8 +85,9 @@ public class FragmentThree_HealthStatus_13to19 extends Fragment implements View.
 
             case R.id.choice2:
                 score += 2;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 19) {

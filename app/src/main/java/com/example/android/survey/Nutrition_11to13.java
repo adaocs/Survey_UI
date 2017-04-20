@@ -67,11 +67,13 @@ public class Nutrition_11to13 extends Fragment implements View.OnClickListener {
         Question question = questions.get(index);
         Option option;
         Answer answer;
+        Long time;
         switch (v.getId()) {
 
             case R.id.male:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
 
@@ -87,8 +89,9 @@ public class Nutrition_11to13 extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.female:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if(index == 13) {

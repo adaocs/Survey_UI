@@ -71,7 +71,8 @@ public class Nutrition_5 extends Fragment implements View.OnClickListener {
 
         Option option = new Option(0, "Breakfast: "+breakfast+ "\n" + "Lunch: " + lunch + "\n" +
                 "Dinner: " + dinner + "\n" + "Snacks: " + snacks + "\n"+ "Drinks: " + drinks);
-        Answer answer = new Answer(question, option);
+        Long time = System.currentTimeMillis();
+        Answer answer = new Answer(question, option, time);
         answers.add(answer);
         index++;
         bundle.putInt("index", index);

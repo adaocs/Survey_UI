@@ -62,12 +62,14 @@ public class FragmentTwo_HealthStatus_3to12 extends Fragment implements View.OnC
         Question question = questions.get(index);
         Option option;
         Answer answer;
+        Long time;
         switch (v.getId()) {
 
             case R.id.choice1:
                 score += 1;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 12) {
@@ -84,8 +86,9 @@ public class FragmentTwo_HealthStatus_3to12 extends Fragment implements View.OnC
 
             case R.id.choice2:
                 score += 2;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 12) {
@@ -102,8 +105,9 @@ public class FragmentTwo_HealthStatus_3to12 extends Fragment implements View.OnC
 
             case R.id.choice3:
                 score += 3;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(2);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 12) {

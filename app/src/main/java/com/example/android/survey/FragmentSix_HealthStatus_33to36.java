@@ -67,13 +67,14 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
         Question question = questions.get(index);
         Option option;
         Answer answer;
-
+        Long time;
         switch (v.getId()) {
 
             case R.id.choice1:
                 score += 1;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 36) {
@@ -91,8 +92,9 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice2:
                 score += 2;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
 
                 index++;
@@ -110,9 +112,9 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice3:
                 score += 3;
-
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(2);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 36) {
@@ -129,8 +131,9 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice4:
                 score += 4;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(3);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 36) {
@@ -147,8 +150,9 @@ public class FragmentSix_HealthStatus_33to36 extends Fragment implements View.On
 
             case R.id.choice5:
                 score += 5;
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(4);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 36) {

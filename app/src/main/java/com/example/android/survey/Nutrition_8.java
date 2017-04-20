@@ -58,8 +58,9 @@ public class Nutrition_8 extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         weight = input.getText().toString();
+        Long time = System.currentTimeMillis();
         option = new Option(0, weight);
-        answer = new Answer(question, option);
+        answer = new Answer(question, option, time);
         answerList.add(answer);
         index++;
 

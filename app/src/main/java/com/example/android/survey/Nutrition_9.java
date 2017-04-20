@@ -67,11 +67,13 @@ public class Nutrition_9 extends Fragment implements View.OnClickListener {
         Nutrition_11to13 fragmentTwo = new Nutrition_11to13();
         Option option;
         Answer answer;
+        Long time;
         switch (v.getId()) {
 
             case R.id.male:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 bundle.putInt("index", index);
@@ -82,8 +84,9 @@ public class Nutrition_9 extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.female:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index = index + 2;
                 bundle.putInt("index", index);

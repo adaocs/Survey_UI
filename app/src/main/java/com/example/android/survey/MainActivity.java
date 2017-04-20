@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private int score;
     private int index;
     private ArrayList<Option> answers;
+    private ArrayList<Long> timeStamps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,12 +110,15 @@ public class MainActivity extends AppCompatActivity {
         score = 0;
         index = 0;
         answers = new ArrayList<>();
+        timeStamps = new ArrayList<>();
         updateQuestions(index);
 
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 score += 0;
+                long time = System.currentTimeMillis();
+                timeStamps.add(time);
                 Question question = questions.get(index);
                 answers.add(question.getOptions().get(0));
                 index++;
@@ -128,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score += 1;
+                long time = System.currentTimeMillis();
+                timeStamps.add(time);
                 Question question = questions.get(index);
                 answers.add(question.getOptions().get(1));
                 index++;
@@ -141,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score += 2;
+                long time = System.currentTimeMillis();
+                timeStamps.add(time);
                 Question question = questions.get(index);
                 answers.add(question.getOptions().get(2));
                 index++;
@@ -154,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score += 3;
+                long time = System.currentTimeMillis();
+                timeStamps.add(time);
                 Question question = questions.get(index);
                 answers.add(question.getOptions().get(3));
                 index++;

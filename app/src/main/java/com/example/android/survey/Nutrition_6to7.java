@@ -77,10 +77,12 @@ public class Nutrition_6to7 extends Fragment implements View.OnClickListener {
         Question question = questions.get(index);
         Option option;
         Answer answer;
+        Long time;
         switch (v.getId()){
             case R.id.choice1:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if(index == 7){
@@ -96,8 +98,9 @@ public class Nutrition_6to7 extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.choice2:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if(index == 7){
@@ -113,8 +116,9 @@ public class Nutrition_6to7 extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.choice3:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if(index == 7){
@@ -130,8 +134,9 @@ public class Nutrition_6to7 extends Fragment implements View.OnClickListener {
 
 
             case R.id.choice4:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if(index == 7){
@@ -147,8 +152,9 @@ public class Nutrition_6to7 extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.choice5:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if(index == 7){

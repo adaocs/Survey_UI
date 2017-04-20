@@ -126,11 +126,12 @@ public class Nutrition_1to4 extends Fragment implements OnClickListener {
         Question question = questions.get(index);
         Option option;
         Answer answer;
-
+        Long time;
         switch (v.getId()) {
             case R.id.male:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(0);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 4) {
@@ -145,8 +146,9 @@ public class Nutrition_1to4 extends Fragment implements OnClickListener {
                 break;
 
             case R.id.female:
+                time = System.currentTimeMillis();
                 option = question.getOptions().get(1);
-                answer = new Answer(question, option);
+                answer = new Answer(question, option, time);
                 answers.add(answer);
                 index++;
                 if (index == 4) {

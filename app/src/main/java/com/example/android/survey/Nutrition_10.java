@@ -69,7 +69,8 @@ public class Nutrition_10 extends Fragment implements View.OnClickListener {
         day   = dayInput.getText().toString();
 
         Option option = new Option(0, "Lost by: "+ weight + " lbs" + "\n" + "In: " + day + " days");
-        Answer answer = new Answer(question, option);
+        Long time = System.currentTimeMillis();
+        Answer answer = new Answer(question, option, time);
         answers.add(answer);
         index++;
         bundle.putInt("index", index);
